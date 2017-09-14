@@ -18,10 +18,12 @@
   <name>jersey-parent</name>
 
   <properties>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jetty.version>9.3.9.v20160517</jetty.version>
     <jersey.version>1.19.1</jersey.version>
     <glassfish.jersey.version>2.23.1</glassfish.jersey.version>
+    <maven.compiler.version>3.7.0</maven.compiler.version>
   </properties>
 
   <dependencyManagement>
@@ -100,10 +102,10 @@
      <plugins>
        <plugin>
          <artifactId>maven-compiler-plugin</artifactId>
-         <version>3.5.1</version>
+         <version>${maven.compiler.version}</version>
          <configuration>
-           <source>1.8</source>
-           <target>1.8</target>
+           <source>${java.version}</source>
+           <target>${java.version}</target>
          </configuration>
        </plugin>
 
